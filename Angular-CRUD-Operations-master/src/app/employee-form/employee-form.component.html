@@ -1,0 +1,28 @@
+
+
+<div>
+    <form *ngIf="edit">
+        <h2>Edit User Details</h2>
+        <p> Name: <input type="text" name="firstName" [(ngModel)]="data.user.name" /></p>
+        <p>Salary <input type="text" name="code" [(ngModel)]="data.user.value" /></p>
+        <p>Code: <input type="text" name="salary" [(ngModel)]="data.user.code" /></p>
+        <p>Description <textarea type="text" name="desc" [(ngModel)]="data.user.description"></textarea> </p>
+        <p>
+          <button type="button" class="btn btn-primary mr-2" (click)="updateUser()">Submit</button>
+          <button type="button" class="btn btn-warning" (click)="cancelEdits()">Cancel</button>
+        </p>
+      </form>
+      <form *ngIf="add">
+        <h2>Add User Details</h2>
+        <p>First Name: <input type="text" name="firstName" [(ngModel)]="newUser.name"/></p>
+        <p>Salary: <input type="text" name="salary" [(ngModel)]="newUser.value"/></p>
+        <p>Description: <input type="text" name="salary" [(ngModel)]="newUser.description"/></p>
+        <p>Code: <input type="text" name="code" [(ngModel)]="newUser.code" /></p>
+        <p>
+          <button type="button" class="btn btn-primary mr-2" (click)="addUser()">Submit</button>
+          <button type="button" class="btn btn-warning" (click)="cancelEdits()">Cancel</button>
+        </p>
+      </form>
+
+      
+</div>
